@@ -63,3 +63,38 @@
   $$a_n = \frac{v_n^2}{r_n} = \frac{\pi m^2 e^8 Z^4}{4 \varepsilon_0^3 h^4 n^5}$$
 * **Proportionality:**
   $$a_n \propto \frac{Z^3}{n^4}$$
+
+
+---
+
+## Flowchart:
+
+```mermaid
+graph LR
+    %% Defining Global Styles for Visual Scannability
+    classDef postulate fill:#e1f5fe,stroke:#03a9f4,stroke-width:2px,color:#000;
+    classDef calculation fill:#fff3e0,stroke:#ff9800,stroke-width:2px,color:#000;
+    classDef finalResult fill:#e8f5e9,stroke:#4caf50,stroke-width:3px,color:#000,font-weight:bold;
+
+    %% Core Postulates Block
+    subgraph P [Bohr's Core Postulates]
+        A([1. Electrostatic Force = Centripetal Force])
+        B([2. Angular Momentum Quantized: L = nhbar])
+    end
+    class A,B postulate;
+
+    %% Mathematical Bridging
+    subgraph C [Derived Step-by-Step Relations]
+        A -->|Combine Forces| D[Calculate Radius: r ∝ n²/Z]
+        B -->|Substitute r| E[Calculate Velocity: v ∝ Z/n]
+    end
+    class D,E calculation;
+
+    %% Final Outputs
+    subgraph R [Final Structural Values]
+        D & E --> F[[Total Energy: E ∝ Z²/n²]]
+        D & E --> G[[Time Period: T ∝ n³/Z²]]
+        E & D --> H[[Acceleration: a ∝ Z³/n⁴]]
+    end
+    class F,G,H finalResult;
+```
